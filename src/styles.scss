@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset */
+
+@import "~normalize.css";
+
+/* Icons */
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+
+/* SEB */
+
+$vanilla-font-basepath: "~@sebgroup/fonts/fonts";
+@import "~@sebgroup/vanilla/src/defaults";
+
+/* SEB Components */
+
+@import "~@sebgroup/vanilla/src/components/inputs/input_base";
+@import "~@sebgroup/vanilla/src/components/buttons/button";
+@import "~@sebgroup/vanilla/src/components/progress-bars/progress-bar";
+
+html {
+  background: $vanilla-color-grey100;
+}

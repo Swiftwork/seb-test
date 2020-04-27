@@ -1,0 +1,17 @@
+.title {
+  font-size: 1.6rem;
+  font-weight: normal;
+
+  em {
+    font-style: normal;
+    font-weight: bold;
+  }
+}
+
+.grid {
+  display: flex;
+
+  > * {
+    margin: 0 1rem 1rem;
+  }
+}

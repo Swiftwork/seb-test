@@ -1,0 +1,30 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm)" (reset)="onReset()" [attr.aria-busy]="loading">
+  <h1 class="title"><i class="far fa-heart"></i> Hur mycket vill du donera till <em>SEB COVID Relief™</em>?</h1>
+  <p class="sdv-preamble">Genom att donera pengar med swish hjälper du till att stötta oss i kampen mot COV-SARS-19.
+    Vården behöver mer pengar för sängar, utrustning och personal. Det minsta lilla hjälper!</p>
+
+  <div class="grid">
+    <div>
+      <label class="sdv-field-label" for="amount">Donation (SEK) *</label>
+      <input id="amount" formControlName="amount" class="sdv-field" placeholder="64 kr" type="number" required="true">
+      <div class="sdv-field-notice">Du måste ange en positiv mängd</div>
+    </div>
+
+    <div>
+      <label class="sdv-field-label" for="tel">Swish nummer</label>
+      <input id="tel" formControlName="tel" class="sdv-field" placeholder="+46" type="tel" required="true">
+    </div>
+  </div>
+
+  <div class="grid">
+    <div>
+      <input type="reset" class="sdv-button sdv-button-alternative" value="Avbryt" />
+    </div>
+
+    <div>
+      <input type="submit" class="sdv-button" value="Donera" [disabled]="loading || checkoutForm.invalid" />
+    </div>
+  </div>
+
+  <div class="sdv-progress-bar" *ngIf="loading"></div>
+</form>

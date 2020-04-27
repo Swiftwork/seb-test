@@ -1,0 +1,14 @@
+@import "~@sebgroup/vanilla/src/variables";
+
+:host {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  max-width: map-get($vanilla-breakpoints, "tablet");
+}
+
+.container {
+  padding: 2rem;
+  background-color: white;
+}

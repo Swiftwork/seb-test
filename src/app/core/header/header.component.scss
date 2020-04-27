@@ -1,0 +1,21 @@
+@import "~@sebgroup/vanilla/src/variables";
+
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+  color: white;
+  background-color: $vanilla-color-grey800;
+
+  img {
+    height: 100%;
+  }
+
+  nav {
+    padding-left: 2rem;
+    font-size: 120%;
+    color: #e6e6e6;
+    font-weight: 400;
+  }
+}
